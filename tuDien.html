@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tử điển</title>
+</head>
+<body>
+<input type="text" id="tuDien"/>
+<input type="button" onclick="timKiem()" value="Tìm Kiếm"/>
+<p id="hienthi"></p>
+</body>
+<script>
+    function timKiem() {
+        let tiengAnh = ["Father", "Mother", "Sister"];
+        let tiengViet = ["Cha", "Mẹ", "Chị"];
+        let tu = document.getElementById("tuDien").value;
+        let hienThi = document.getElementById("hienthi");
+        for (let i = 0; i < tiengAnh.length; i++) {
+            if (tu.toLowerCase() === tiengAnh[i].toLowerCase()) {
+                hienThi.innerHTML = tiengViet[i];
+                break;
+            } else {
+                hienThi.innerHTML = "Không tìm thấy";
+            }
+        }
+    }
+
+</script>
+</html>
